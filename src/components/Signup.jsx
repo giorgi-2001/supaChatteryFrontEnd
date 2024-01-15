@@ -22,7 +22,7 @@ const Signup = () => {
     const handleSubmit = async e => {
         e.preventDefault()
 
-        if (avatar.size > 2097152) return setError('selected image is too big')
+        if (avatar?.size > 2097152) return setError('selected image is too big')
 
         const string = reader.result
         await signup(email, username, password, password2, string)

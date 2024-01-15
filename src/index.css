@@ -18,7 +18,7 @@ img {
 }
 
 .App {
-    min-height: 100svh;
+    min-height: 100vh;
     background-color: #333;
     background-image: url('./assets/bg.jpg');
     background-size: cover;
@@ -390,7 +390,7 @@ img {
         position: fixed;
         top: 0;
         right: 0;
-        height: 100svh;
+        height: 100vh;
         max-height: 100svh;
         border-radius: 0;
         width: 300px;
