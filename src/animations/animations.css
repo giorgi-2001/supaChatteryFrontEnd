@@ -1,0 +1,96 @@
+.container {
+    width: 60px;
+    height: 30px;
+    background: #bbb;
+    border-radius: 100vh;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dot {
+    --size: 10px;
+    --uper-dot-color: #555;
+    --lower-dot-color: #666;
+
+    width: var(--size);
+    height: var(--size);
+    background-color: #555;
+    border-radius: 50%;
+
+    --delay: 1s;
+
+    animation: bounce 1s var(--delay) infinite  ease;
+    animation-fill-mode: forwards;
+}
+
+.dot:nth-child(2) {
+    --delay: 0.15s
+}
+
+.dot:nth-child(3) {
+    --delay: 0.3s
+}
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(2px);
+        background-color: var(--lower-dot-color);
+    }
+
+    35% {
+        transform: translateY(-5px);
+        background-color: var(--uper-dot-color);
+    }
+
+    50% {
+        transform: translateY(2px);
+        background-color: var(--lower-dot-color);
+    }
+
+    100% {
+        transform: translateY(2px);
+        background-color: var(--lower-dot-color);
+    }
+}
+
+
+.loader {
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+    margin-inline: auto;
+    position: relative;
+}
+
+.loader div {
+    width: 100%;
+    height: 100%;
+    border: 15px solid transparent;
+    border-top-color: rgb(154, 38, 255);
+    border-radius: 50%;
+    position: absolute;
+
+    animation: spin1 1.6s linear infinite;
+}
+
+
+.loader div:nth-child(2) {
+    border-bottom-color: rgb(154, 38, 255);
+    animation: spin2 1.6s linear infinite;
+}
+
+
+@keyframes spin1 {
+    0% {transform: rotateZ(0deg); border-width: 20px;}
+    50% {transform: rotateZ(180deg); border-width: 2px;}
+    100% {transform: rotateZ(360deg); border-width: 20px;}
+}
+
+@keyframes spin2 {
+    0% {transform: rotateZ(0deg); border-width: 2px;}
+    50% {transform: rotateZ(180deg); border-width: 20px;}
+    100% {transform: rotateZ(360deg); border-width: 2px;}
+}
