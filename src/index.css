@@ -390,8 +390,7 @@ img {
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
-        max-height: 100svh;
+        min-height: 100vh;
         border-radius: 0;
         width: 300px;
         max-width: initial;
