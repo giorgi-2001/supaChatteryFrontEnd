@@ -95,7 +95,7 @@ const ListItem = ({ item, chatItem, setChatsLayout }) => {
             <div>
                 <p>{item.username}</p>
                 {(chatItem && lastMessage && !itemClass) && <p className='last-message'>{lastMessage.content}</p>}
-                {(chatItem && !lastMessage && chatItem.last_message?.sender !== user._id) &&<p className='last-message'>{chatItem.last_message?.content}</p>}
+                {(chatItem && !lastMessage && chatItem.last_message?.sender !== user._id) &&<p className='last-message'>{chatItem.last_message?.content.substring(0, 15)}...</p>}
             </div>
         </div>
     )
