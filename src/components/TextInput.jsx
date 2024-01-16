@@ -78,7 +78,7 @@ const TextInput = ({ socket, socketConnected }) => {
 
     return ( 
         <>
-        <div style={{marginTop: '1rem', height: '30px', marginBottom: '-1.5rem'}}>
+        <div style={{marginTop: '1rem', height: '30px', marginBottom: '1rem'}}>
         { isTyping && <TypingIndicator />}
         </div>
         <form className="text-input-form" onSubmit={handleSubmit} >
